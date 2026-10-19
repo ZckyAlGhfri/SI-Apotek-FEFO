@@ -30,5 +30,5 @@ Aplikasi manajemen apotek dan kasir berbasis Web (ASP.NET Core C#) yang dilengka
 1. 2457201053 - [Muhammad Zacky Alghifari] *(Lead / Fullstack)*
 2. 2457201019 - [Abdulah Syauki] *(Backend Developer)*
 3. 2457201036 - [Komala Dewi] *(Frontend Developer)*
-4. 2457201020 - [Nazla Khoerunisa] *(System Analyst & QA 1)*
-5. 2457201017 - [Denna Agustin] *(Database & QA 2)*
+4. 2457201020 - [Nazla Khoerunisa] *(QA 1)*
+5. 2457201017 - [Denna Agustin] *(QA 2)*
