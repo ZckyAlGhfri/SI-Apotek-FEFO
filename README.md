@@ -19,7 +19,7 @@ Aplikasi manajemen apotek dan kasir berbasis Web (ASP.NET Core C#) yang dilengka
 
 ### 📁 Struktur Repositori
 - `/docs`: Berisi dokumen spesifikasi sistem (SRS) dan diagram ERD (.drawio).
-- `/src` *(akan datang)*: Source code aplikasi ASP.NET Core.
+- `/src` : Source code aplikasi ASP.NET Core.
 
 ### Informasi Tim
 * **Nama Tim:** [Kelompok 6]
