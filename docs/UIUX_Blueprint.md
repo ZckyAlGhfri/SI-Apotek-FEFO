@@ -74,8 +74,6 @@ PharmaSentinel mengadopsi filosofi desain modern ala *software enterprise* kelas
 ## 3. ARSITEKTUR INFORMASI & MATRIKS HAK AKSES (RBAC)
 
 ### 3.1 Peta Halaman Sistem (Sitemap)
-
-```text
 [ ROOT GATEWAY ]
   └── index.html (Halaman Login & Pintasan Akses Cepat Demo)
        │
@@ -90,8 +88,7 @@ PharmaSentinel mengadopsi filosofi desain modern ala *software enterprise* kelas
               ├── admin-karantina.html (Isolasi Fisik Obat ED, Surat Retur & Berita Acara Musnah)
               └── admin-katalog.html   (Master SKU Obat, Bentuk Sediaan & Setting Alert Stok)
 
-3.2 Matriks Hak Akses & Isolasi Data (RBAC Matrix)
-
+### 3.2 Matriks Hak Akses & Isolasi Data (RBAC Matrix)
 | Fitur / Modul Operasional            | Kasir POS              | Admin Gudang | Rationale & Alasan Desain Sistem                                         |
 | :----------------------------------- | :--------------------: | :----------: | :----------------------------------------------------------------------- |
 | **Login Multi-Peran**                | Ya                     | Ya           | Pintu masuk autentikasi tunggal.                                         |
@@ -106,9 +103,9 @@ PharmaSentinel mengadopsi filosofi desain modern ala *software enterprise* kelas
 | **Cetak Ulang Struk Transaksi**      | **Ya (Milik Sendiri)** | Ya (Semua)   | Layanan cetak nota susulan jika pembeli meminta struk ulang.             |
 | **Rekonsiliasi Kas (Tutup Shift)**   | **Input Fisik**        | **Auditor**  | Kasir menghitung uang fisik di laci (*blind close*), Admin memvalidasi.  |
 
-4. SPESIFIKASI DETAIL SELURUH MODUL LAYAR
+## 4. SPESIFIKASI DETAIL SELURUH MODUL LAYAR
 
-4.1 Modul 01: Pintu Gerbang Otentikasi (index.html)
+### 4.1 Modul 01: Pintu Gerbang Otentikasi (index.html)
 
   - Tujuan Pengguna: Halaman autentikasi aman bagi staf apotek sekaligus
     menyediakan akses instan bagi penguji/dosen saat sesi evaluasi.
@@ -127,7 +124,7 @@ PharmaSentinel mengadopsi filosofi desain modern ala *software enterprise* kelas
   - Micro-Interactions: Efek hover transform translateY(-2px) dengan aksen batas
     hijau toska saat kursor menyentuh kartu demo.
 
-4.2 Modul 02: Meja Kasir Cerdas & FEFO Simulator (kasir-pos.html)
+### 4.2 Modul 02: Meja Kasir Cerdas & FEFO Simulator (kasir-pos.html)
 
   - Tujuan Pengguna: Antarmuka titik penjualan (POS) berkecepatan tinggi yang
     mengeksekusi algoritma FEFO di backend tanpa menuntut kasir memilih nomor
@@ -164,7 +161,7 @@ PharmaSentinel mengadopsi filosofi desain modern ala *software enterprise* kelas
         notifikasi peringatan jika kuantitas belanja mencapai batas akumulasi
         seluruh batch fisik aktif yang ada di sistem.
 
-4.3 Modul 03: Riwayat Transaksi Shift Kasir (kasir-riwayat.html)
+### 4.3 Modul 03: Riwayat Transaksi Shift Kasir (kasir-riwayat.html)
 
   - Tujuan Pengguna: Tempat kasir memantau seluruh transaksi yang diterbitkan
     pada jam kerjanya, melihat pembagian pemotongan batch pada nota lampau, dan
@@ -182,7 +179,7 @@ PharmaSentinel mengadopsi filosofi desain modern ala *software enterprise* kelas
         kasir bertugas, rincian barang, total bayar, kembalian, dan ucapan lekas
         sembuh).
 
-4.4 Modul 04: Katalog Ketersediaan & Lokasi Rak (kasir-stok.html)
+### 4.4 Modul 04: Katalog Ketersediaan & Lokasi Rak (kasir-stok.html)
 
   - Tujuan Pengguna: Memfasilitasi kasir dalam menjawab pertanyaan ketersediaan
     obat dan menemukan titik simpan rak obat fisik di gudang/etalase secara
@@ -196,7 +193,7 @@ PharmaSentinel mengadopsi filosofi desain modern ala *software enterprise* kelas
         batch prioritas FEFO terdekat.
       - Akses data harga beli modal dan distributor ditutup total.
 
-4.5 Modul 05: Dashboard Eksekutif & Radar Kedaluwarsa (admin-dashboard.html)
+### 4.5 Modul 05: Dashboard Eksekutif & Radar Kedaluwarsa (admin-dashboard.html)
 
   - Tujuan Pengguna: Pusat kendali manajer apotek dan petugas gudang untuk
     memantau pergerakan stok, valuasi modal, dan mitigasi risiko kedaluwarsa.
@@ -218,7 +215,7 @@ PharmaSentinel mengadopsi filosofi desain modern ala *software enterprise* kelas
           - Memuat taksiran nilai modal tertahan pada batch bersangkutan serta
             lencana status tindakan (Prioritas 1 Kasir).
 
-4.6 Modul 06: Penerimaan Batch & Faktur Logistik (admin-batch.html)
+### 4.6 Modul 06: Penerimaan Batch & Faktur Logistik (admin-batch.html)
 
   - Tujuan Pengguna: Registrasi kedatangan kardus obat fisik dari distributor
     (PBF) berdasarkan dokumen faktur resmi pabrik.
@@ -240,7 +237,7 @@ PharmaSentinel mengadopsi filosofi desain modern ala *software enterprise* kelas
         dengan atau lebih lampau dari tanggal hari ini, formulir ditolak secara
         mutlak dengan notifikasi pelanggaran regulasi.
 
-4.7 Modul 07: Karantina & Penanganan Obat ED (admin-karantina.html)
+### 4.7 Modul 07: Karantina & Penanganan Obat ED (admin-karantina.html)
 
   - Tujuan Pengguna: Tata kelola pemisahan fisik obat kedaluwarsa dari peredaran
     umum secara sah sesuai regulasi BPOM tanpa merusak integritas basis data
@@ -258,7 +255,7 @@ PharmaSentinel mengadopsi filosofi desain modern ala *software enterprise* kelas
             dengan konfirmasi audit untuk menerbitkan Berita Acara Pemusnahan
             (BAP).
 
-4.8 Modul 08: Master Katalog & Pengaturan Ambang Stok (admin-katalog.html)
+### 4.8 Modul 08: Master Katalog & Pengaturan Ambang Stok (admin-katalog.html)
 
   - Tujuan Pengguna: Pengelolaan induk data obat dan penentuan ambang batas
     peringatan stok menipis (Minimum Stock Alert Threshold).
@@ -272,9 +269,9 @@ PharmaSentinel mengadopsi filosofi desain modern ala *software enterprise* kelas
         stok per obat yang akan memicu indikator bahaya merah pada dashboard
         jika total stok fisik berada di bawah ambang tersebut.
 
-5. SPESIFIKASI ALGORITMA & LOGIKA MESIN FEFO (CORE ENGINE)
+## 5. SPESIFIKASI ALGORITMA & LOGIKA MESIN FEFO (CORE ENGINE)
 
-5.1 Mekanisme Alokasi Pemotongan Batch (Split-Batch Logic)
+### 5.1 Mekanisme Alokasi Pemotongan Batch (Split-Batch Logic)
 
 Ketika kasir mengonfirmasi transaksi untuk suatu jenis obat O sejumlah
 permintaan kuantitas Q_{\text{req}}:
@@ -311,7 +308,7 @@ permintaan kuantitas Q_{\text{req}}:
              Lencana "SPLIT BATCH" Aktif
              (Iterasi berlanjut ke Batch_i+1)
 
-5.2 Integritas Transaksi Database (ACID Compliance)
+### 5.2 Integritas Transaksi Database (ACID Compliance)
 
 Seluruh proses pengurangan multi-batch di atas dieksekusi di dalam satu blok
 transaksi basis data:
@@ -329,7 +326,7 @@ try {
     throw;
 }
 
-5.3 Protokol Karantina Otomatis (Zero-Tolerance Expired Sale)
+### 5.3 Protokol Karantina Otomatis (Zero-Tolerance Expired Sale)
 
 Sistem memiliki logika filter global (Global Query Filter) di tingkat backend:
 \text{StatusBatch} = \begin{cases} \text{AKTIF (Dijual Kasir)}, & \text{jika } \text{TanggalKadaluwarsa} > \text{TanggalHariIni} \\ \text{KARANTINA (Auto-Locked)}, & \text{jika } \text{TanggalKadaluwarsa} \le \text{TanggalHariIni} \end{cases}
@@ -337,9 +334,9 @@ Batch dengan status KARANTINA secara otomatis dihilangkan dari hasil query modul
 kasir, sehingga kasir tidak akan pernah dapat melihat atau menjual obat yang
 telah melewati tanggal kedaluwarsa.
 
-6. PROTOKOL AUDIT SHIFT & REKONSILIASI KASIR
+##6. PROTOKOL AUDIT SHIFT & REKONSILIASI KASIR
 
-6.1 Alur Tutup Shift Kasir (Blind Close Protocol)
+###6.1 Alur Tutup Shift Kasir (Blind Close Protocol)
 
 1.  Kasir menyelesaikan transaksi terakhir pada jam tugasnya, lalu menekan
     tombol "Rekap Tutup Shift" pada modul kasir-riwayat.html.
