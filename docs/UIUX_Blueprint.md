@@ -411,11 +411,3 @@ pengujian keandalan algoritma pemotongan batch secara atomik.
 
 
 ---
-
-### Cara Mengunggah ke GitHub:
-1. Buka repositori GitHub Anda (**`SI-Apotek-FEFO`**).
-2. Masuk ke folder **`docs`** (atau buat folder `docs` jika belum ada).
-3. Buat file baru dengan nama **`UIUX_Blueprint.md`**.
-4. Tempel (*paste*) seluruh teks Markdown di atas, lalu klik **Commit Changes**.
-
-Seluruh fondasi perancangan sistem kelompok Anda (SRS, ERD, dan Master Blueprint UI/UX) kini telah lengkap 100% dan terstandarisasi dengan sangat profesional!
